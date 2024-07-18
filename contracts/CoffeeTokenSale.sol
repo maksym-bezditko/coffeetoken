@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity 0.8.20;
 
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
@@ -29,7 +29,7 @@ contract CoffeeTokenSale is AccessControl {
     }
 
     function setPrice(uint256 _priceInWei) public onlyRole(PRICE_CHANGER_ROLE) {
-        require(priceInWei > 0, "Price should be more that 0");
+        require(_priceInWei > 0, "Price should be more that 0");
         require(priceInWei != _priceInWei, "Such price is the current price");
 
         priceInWei = _priceInWei;
