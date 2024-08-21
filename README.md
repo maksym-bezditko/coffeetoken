@@ -115,7 +115,3 @@ truffle test
    // Purchase tokens
    await coffeeTokenSale.purchase({ from: "0xYourAddress", value: web3.utils.toWei("1", "ether") });
    ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
